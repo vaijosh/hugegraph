@@ -61,6 +61,9 @@ mvn clean package -pl hugegraph-server -am -DskipTests   # 4. server
 Runtime scripts (human-run) live in `hugegraph-server/hugegraph-dist/src/assembly/static/bin/`:
 `init-store.sh`, `start-hugegraph.sh`, `stop-hugegraph.sh`.
 
+Add `-Dwith-ranger-plugin` to a `hugegraph-dist` build to bundle the Apache Ranger
+authorization plugin jar into `lib/` (opt-in — heavy transitive deps, off by default).
+
 ## Testing
 
 Server tests implicitly prefix `mvn test -pl hugegraph-server/hugegraph-test -am`:
